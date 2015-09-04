@@ -120,11 +120,11 @@ Loops have special properties, such as length or current item numeric index.
 
 You can display them like this :
 
-{{ item.$ }} for the array length
+`{{ item.$ }}` for the array length
 
 and
 
-{{ item.# }} for the current item index.
+`{{ item.# }}` for the current item index.
 
 /!\ _Don't forget that you cannot access an item index out of a loop context._
 
