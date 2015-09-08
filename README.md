@@ -19,6 +19,23 @@ be adapted into a valid result.
 ##Parsing exception handler
 Skin includes an exception handler that will throw errors and which line the problem happens.
 
+##Inheritance & inclusion
+
+###Extends
+With Skin, you can extend your template with another main template.
+For example, if you write `@extends main` in your current template, it will extend the "main.skln" template.
+
+You can use slashes or backslashes if you need to access a template from a directory : `@extends main/main` will look for the template main.skln in your views directory, then in "main" directory.
+
+You then need to write `@content` where you want to display your extended template in the parent.
+
+###Include
+You can also include partial views that would be recurrent (for example : a navigation view).
+
+To do so, write `@partial nav` in your current template where you want to include the partial view "nav.skln". 
+
+Just as extending, there's a possibility to fetch partial content from another directory by using slashes or backslashes.
+
 ##Tags & indent
 Instead of writing (X)HTML with tags in your template, you only have to type HTML elements names. 
 Just note that you must indent and add new lines to create relationship between elements.
@@ -53,6 +70,7 @@ Here is a complete element syntax :
 `div id(myId) class(classOne; classTwo) contenteditable(true)`
 
 /!\ _HTML boolean attributes such as "checked", "readonly", etc ... require a value in Skin templates._
+/!\ _If you need to write text and wanna be sure it won't be parsed, just write "plaintext" as a tag and put your text under it._
 
 ###Shortcuts for special attributes
 Skin, id and class attributes have shortcut attributes that you can use in your skeleton to write your code faster.
