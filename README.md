@@ -160,3 +160,27 @@ section skelse(test)
   Else, display me !
 ```
 
+##Samples
+
+Samples or short snippets of templates that you would reuse in client-side code.
+
+For example, you want to dynamically append a list item but without rewriting HTML in your code :
+
+```
+ul %items=>item
+  li sksample(listItem)
+    {{item.key}} - {{item.value}}
+```
+
+It will keep the node where you wrote the attribute plus all its children ...
+
+```
+Samples.listItem = '
+li
+  {{item.key}} - {{item.value}}
+';
+```
+
+... as a sample.
+
+The sample file will be named "'TEMPLATENAME'Sample.json" and will contain all the samples as a JavaScript object.
