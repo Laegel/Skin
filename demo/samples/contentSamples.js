@@ -1,0 +1,1 @@
+Carpenter.Samples = {"sample":"li \n    {{item.#}} : {{item.name}} - {{item.value}}\n","testHidden":"div \n    {= TEST_HIDDEN =}\n    plaintext\n        I've got something inside !\n"}

@@ -1,0 +1,25 @@
+@extends main\main
+@partial partial\language
+div ?isNameSet #container
+	h1
+		{=WELCOME_NAME | name=}
+
+	ul %loop=>item
+		li $sample;true
+			{{item.#}} : {{item.name}} - {{item.value}}
+
+	div $testHidden;false
+		{= TEST_HIDDEN =}
+		plaintext
+			I've got something inside !
+
+div :isNameSet #container
+	h1
+		{=WELCOME=}
+	
+	form method(post)
+		label
+			{=WRITE_NAME=}
+		input type(text) name(name)
+
+		input type(submit) value({=SUBMIT=})

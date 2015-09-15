@@ -1,0 +1,13 @@
+doctype
+html lang({{language}})
+    head
+        title
+            {=TITLE=}
+        link rel(stylesheet) href(style.css)
+        meta charset(utf-8)
+    body
+        div #wrapper
+            @content
+        script
+            Carpenter = {};
+        script type(text/javascript) src(samples/contentSamples.js)

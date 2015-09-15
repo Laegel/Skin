@@ -1,0 +1,7 @@
+form
+	select %languages=>language name(language)
+		option value({{language.value}}) selected(true) ?language.isSelected
+			{{language.name}}
+		option value({{language.value}}) :language.isSelected
+			{{language.name}}
+	input type(submit) value({=SUBMIT=})
